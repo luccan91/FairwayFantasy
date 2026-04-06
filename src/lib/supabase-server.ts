@@ -1,8 +1,3 @@
-// ============================================================
-// SUPABASE SERVER CLIENT
-// Only import this in Server Components and API routes
-// ============================================================
-
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 
@@ -14,8 +9,8 @@ export async function createServerSupabaseClient() {
     {
       cookies: {
         getAll: () => cookieStore.getAll(),
-        setAll: (cookiesToSet) => {
-          cookiesToSet.forEach(({ name, value, options }) =>
+        setAll: (cookiesToSet: any[]) => {
+          cookiesToSet.forEach(({ name, value, options }: any) =>
             cookieStore.set(name, value, options)
           );
         },
