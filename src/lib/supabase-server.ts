@@ -1,4 +1,3 @@
-import { createServerSupabaseClient } from '@/lib/supabase-server';
 // ============================================================
 // SUPABASE SERVER CLIENT
 // Only import this in Server Components and API routes
